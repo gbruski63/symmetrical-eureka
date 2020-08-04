@@ -33,6 +33,8 @@ try:
                         elif counter < (gpioindex * indexmultiplier):
                                 GPIO.setup(mygpios[gpioindex], GPIO.LOW) #turns off led
                                 
+                        gpioindex += 1
+                                
                 clkLastState = clkState #updates the state of the clk internal contact of the r.encoder
                 sleep(0.01)
 finally:
